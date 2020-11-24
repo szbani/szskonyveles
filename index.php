@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +10,7 @@
     
     <link rel='stylesheet' type='text/css' media='screen' href='assets/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/sidebar.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='assets/modal_login.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='assets/modal_reg.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/style.css'>
     <script src="https://kit.fontawesome.com/1d71ea3fec.js" crossorigin="anonymous"></script>
     <script src='assets/sidebar.js'></script>
     <script src='assets/modal.js'></script>
@@ -31,86 +31,86 @@
     </div >
     
     <!--  felugró menü (bejelentkezés)  -->
-    <div id="Lmodal" class="modal_log">
-        <div class="modal_content2_log">
-            <span onclick="Lclosebtn()" class="close">&times;</span>
-            <label class="log_label"><h2>Bejelentkezés</h2></label>
+    <div id="Lpopup" class="popup">
+        <div class="header">
+  	    <h2>Bejelentkezés</h2>
         </div>
-        <div class="modal_content_log">
-            <br>
-            <label class="log_label" for="E">Email</label>
-            <br>
-            <input class="log_mezo" type="text" id="Email" name="E" placeholder="Email">
-            <br>
-            <br>
-            <label class="log_label" for="pass">Jelszó</label>
-            <br>
-            <input class="log_mezo" type="password" id="Password" name="pass" placeholder="Jelszó">
-            <br>
-            <br>
-        </div>
-        <div class="modal_content2_log">
-            <button class="log_button">Bejelentkezés</button>
-        </div>
+        <form method="post" action="index.php">
+  	    <?php include('errors.php'); ?>
+  	    <div class="input-group">
+  		    <label>Felhasználónév</label>
+  		    <input type="text" name="username" >
+  	    </div>
+  	    <div class="input-group">
+  		    <label>Jelszó</label>
+  		    <input type="password" name="password">
+  	    </div>
+  	    <div class="input-group">
+  		    <button type="submit" class="btn" name="login_user">Bejelentkezés</button>
+  	    </div>
+  	        <p>
+  		        Nincs még fiókod? <a onclick="Rbtn()" class="changepopup">Regisztálj</a>
+  	        </p>
+        </form>
     </div>
     <!--  felugró menü (regisztárció)  -->
-    <div id="Rmodal" class="modal_reg">
-        <div class="modal_content2_reg">
-            <span onclick="Rclosebtn()" class="close">&times;</span>
-            <label><h2>Regisztárció</h2></label>
+    <div id="Rpopup" class="popup">
+        <div class="header">
+            <span onclick="Rclosebtn()" class="closebtn">&times;</span>
+  	        <h2>Regisztráció</h2>
         </div>
-        <div class="modal_content_reg">
-            <label class="reg_label" for="nev1">Keresztnév<span class="req">*</span></label>
-            <br>
-            <input class="reg_mezo" type="text" id="Password" name="nev1" placeholder="Keresztnév">
-            <br>
-            <label class="reg_label_2" for="nev2">Vezetéknév<span class="req">*</span></label>
-            <br>
-            <input class="reg_mezo_2" type="text" id="Password" name="nev2" placeholder="Vezetéknév">
-            <br>
-            <br>
-            <label class="reg_label" for="E">Email<span class="req">*</span></label>
-            <br>
-            <input class="reg_mezo_email" type="text" id="Email" name="E" placeholder="Email">
-            <br>
-            <br>
-            <label class="reg_label" for="pass">Jelszó<span class="req">*</span></label>
-            <br>
-            <input class="reg_mezo" type="password" id="Password" name="pass" placeholder="Jelszó">
-            <br>
-            <label class="reg_label_2" for="pass2">Jelszó megerősítése<span class="req">*</span></label>
-            <br>
-            <input class="reg_mezo_2" type="password" id="Password" name="pass2" placeholder="Jelszó">
-        </div>
-        <div class="modal_content2_reg">
-            <button class="reg_button">Regisztráció</button>
-        </div>
+        <form method="post" action="index.php">
+  	    <?php include('errors.php'); ?>
+  	    <div class="input-group">
+  	        <label>Felhasználónév</label>
+            <input type="text" name="username" value="<?php echo $username; ?>">
+  	    </div>
+  	    <div class="input-group">
+  	        <label>Email</label>
+  	        <input type="email" name="email" value="<?php echo $email; ?>">
+  	    </div>
+  	    <div class="input-group">
+  	        <label>Jelszó</label>
+  	        <input type="password" name="password_1">
+  	    </div>
+  	    <div class="input-group">
+  	        <label>Jelszó megerősítése</label>
+  	        <input type="password" name="password_2">
+  	    </div>
+  	    <div class="input-group">
+  	        <button type="submit" class="btn" name="reg_user">Regisztráció</button>
+  	    </div>
+  	        <p>
+  		        Van már fiókod? <a onclick="Lbtn()" class="changepopup">Jelentkezz be</a>
+  	        </p>
+        </form>
     </div>
-
     <!-- oldal -->
-    <div>
-    <div id="Ismerteto" class="main">
-        <h1>SzSkonyveles</h1>
-        <h2>
-            Ha egy megbízható könyvelést keres, akkor jó helyen jár.<br>
-            Pécs és környékén kedvező áron segítünk önnek könyvelni és az ügyeit intézni.
-        </h2>    
-    </div>
-    <div class="price_comm">
-        <div id="Arak" class="price">
+    <div class="main">
+    <div id="Ismerteto" class="page" >
+        <div class="page_content">
+            <h1>SzSkönyvelés</h1>
+            <h2>
+                Ha egy megbízható könyvelést keres, akkor jó helyen jár.
+                Pécs és környékén kedvező áron segítünk önnek könyvelni és az ügyeit intézni.
+            </h2>    
+        </div>
+        <div id="Arak" class="page_content">
             <h1>Árak</h1>
             <h2>ár1:####</h2>
             <h2>ár2:####</h2>
             <h2>Hosszab távú könyvelésnél lehet ár ajánlatot kérni. </h2>
         </div>
-        <div id="Elerhetoseg" class="comm">
+        <div id="comm" class="page_content">
             <h1>Elérhetőség</h1>
             <h2><i class="fas fa-map-marker-alt"></i>Pécs és környéke</h2>
             <h2><i class="fas fa-phone-alt"></i>0620 ###-####</h2>
             <h2><i class="fas fa-envelope"></i>hencz###@gmail.com</h2>
         </div>
+        <div id="Ertekelesek" class="page_content">
+            <h1>Értékelések</h1>
+        </div>
     </div>
-    <div id="Ertekelesek" class="rate"><h1>Értékelések</h1></div>
-	</div>
+    </div>
 </body>
 </html>
