@@ -17,11 +17,11 @@ if (isset($_POST['reg_user'])) {
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
-  if (empty($username)) { array_push($errors, "Username is required"); }
-  if (empty($email)) { array_push($errors, "Email is required"); }
-  if (empty($password_1)) { array_push($errors, "Password is required"); }
+  if (empty($username)) { array_push($errors, "Hiányzik a felhasználónév"); }
+  if (empty($email)) { array_push($errors, "Hiányzik az Email"); }
+  if (empty($password_1)) { array_push($errors, "Hiányzik a jelszó"); }
   if ($password_1 != $password_2) {
-	array_push($errors, "The two passwords do not match");
+	array_push($errors, "A két jelszó nem eggyezik");
   }
 
 
@@ -32,11 +32,11 @@ if (isset($_POST['reg_user'])) {
   
   if ($user) { // ha már létezik a fiók
     if ($user['username'] === $username) {
-      array_push($errors, "Username already exists");
+      array_push($errors, "A felhasználónév már foglalt");
     }
 
     if ($user['email'] === $email) {
-      array_push($errors, "email already exists");
+      array_push($errors, "Ez az Email már foglalt");
     }
   }
 
@@ -48,7 +48,7 @@ if (isset($_POST['reg_user'])) {
   			  VALUES('$username', '$email', '$password')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
-  	$_SESSION['success'] = "You are now logged in";
+  	$_SESSION['success'] = "Be vagy jelentkezve";
   	header('location: index.php');
   }
 }
@@ -57,10 +57,10 @@ if (isset($_POST['login_user'])) {
     $password = mysqli_real_escape_string($db, $_POST['password']);
   
     if (empty($username)) {
-        array_push($errors, "Username is required");
+        array_push($errors, "Hiányzik a felhasználónév");
     }
     if (empty($password)) {
-        array_push($errors, "Password is required");
+        array_push($errors, "Hiányzik a jelszó");
     }
   
     if (count($errors) == 0) {
@@ -69,10 +69,10 @@ if (isset($_POST['login_user'])) {
         $results = mysqli_query($db, $query);
         if (mysqli_num_rows($results) == 1) {
           $_SESSION['username'] = $username;
-          $_SESSION['success'] = "You are now logged in";
+          $_SESSION['success'] = "Be vagy jelentkezve";
           header('location: index.php');
         }else {
-            array_push($errors, "Wrong username/password combination");
+            array_push($errors, "Roszz felhasználónév/jelszó");
         }
     }
   }

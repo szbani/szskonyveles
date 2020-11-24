@@ -7,15 +7,26 @@
   width: 100%;
   height: 100%;
   background-color: rgba(245, 255, 250, 0.6);
-  display: none;
+  display: block;
   position: fixed;
 }
-
+.popup_success{
+  font-size: 120%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: fixed;
+}
+.changepopup{
+  text-decoration-style: underline;
+  color: blue;
+  cursor: pointer;
+}
 .header {
   width: 20%;
   margin: 50px auto 0px;
   color: white;
-  background: rgba(50, 163, 255,0.9);
+  background: rgba(46, 139, 214, 0.959);
   text-align: center;
   border: 1px solid #B0C4DE;
   border-bottom: none;
@@ -75,10 +86,5 @@
   float: right;
   font-size: 36px;
   font-weight: bold;
-  cursor: pointer;
-}
-.changepopup{
-  text-decoration-style: underline;
-  color: blue;
   cursor: pointer;
 }

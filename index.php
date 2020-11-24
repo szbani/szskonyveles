@@ -24,18 +24,37 @@
         <a onclick="mozgas_2()"><i class="fas fa-coins"></i>Árak</a>
         <a onclick="mozgas_3()"><i class="fas fa-phone"></i>Elérhetőség</a>
         <a onclick="mozgas_4()"><i class="fas fa-comment"></i>Értékelések</a>
+        
         <div class="Login_Register">
         <button onclick="Lbtn()">Bejelentkezés</button>
         <button onclick="Rbtn()">Regisztráció</button>
         </div>
+
     </div >
-    
+    <!-- sikeres regisztráció -->
+    <div class="popup_succes">
+        <div class="content">
+
+  	        <?php if (isset($_SESSION['success'])) : ?>
+            <div class="error success" >
+      	        <h3>
+                  <p>Sikeres regisztáció <strong><?php echo $_SESSION['username']; ?></strong></p>
+                <?php 
+          	        echo $_SESSION['success']; 
+          	        unset($_SESSION['success']);
+                ?>
+      	        </h3>
+            </div>
+  	        <?php endif ?>
+        </div>
+    </div>
+
     <!--  felugró menü (bejelentkezés)  -->
     <div id="Lpopup" class="popup">
         <div class="header">
   	    <h2>Bejelentkezés</h2>
         </div>
-        <form method="post" action="index.php">
+        <form method="post">
   	    <?php include('errors.php'); ?>
   	    <div class="input-group">
   		    <label>Felhasználónév</label>
@@ -59,7 +78,7 @@
             <span onclick="Rclosebtn()" class="closebtn">&times;</span>
   	        <h2>Regisztráció</h2>
         </div>
-        <form method="post" action="index.php">
+        <form method="post">
   	    <?php include('errors.php'); ?>
   	    <div class="input-group">
   	        <label>Felhasználónév</label>
