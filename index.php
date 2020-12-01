@@ -17,35 +17,42 @@
 </head>
 <body>
     <!-- oldalmenü   -->
-    <div class="button"><span onclick="openNav()">&#9776;</span></div>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="sidenav">
+    <div class="user_information">
+        <?php if (isset($_SESSION['username'])) { ?>
+            <strong><p class="username"><?php echo $_SESSION['username']; ?></strong></p>
+            <a href="logout.php" name="logout_user" class="logout">Kijelentkezés</a>
+
+        <?php }else{ ?>
+                <p>Jelentkezz be</p>
+                <button onclick="Lbtn()">Bejelentkezés</button>
+                <button onclick="Rbtn()">Regisztráció</button>
+        <?php }?>
+        </div>
+        <div class="sidenav_btns">
         <a onclick="mozgas_1()"><i class="fas fa-home"></i>Ismertető</a>
         <a onclick="mozgas_2()"><i class="fas fa-coins"></i>Árak</a>
         <a onclick="mozgas_3()"><i class="fas fa-phone"></i>Elérhetőség</a>
         <a onclick="mozgas_4()"><i class="fas fa-comment"></i>Értékelések</a>
-        
-        <div class="Login_Register">
-        <button onclick="Lbtn()">Bejelentkezés</button>
-        <button onclick="Rbtn()">Regisztráció</button>
         </div>
-
-    </div >
+    </div>
     <!-- sikeres regisztráció -->
-    <div class="popup_succes">
-        <div class="content">
-
-  	        <?php if (isset($_SESSION['success'])) : ?>
+    <div id="popup_succes" class="popup_succes">
+        <div class="content_succes">
+  	        <?php if (isset($_SESSION['success'])) { ?>
             <div class="error success" >
       	        <h3>
-                  <p>Sikeres regisztáció <strong><?php echo $_SESSION['username']; ?></strong></p>
-                <?php 
+                  <p >Sikeres regisztáció</p>
+                <script type="text/javascript">
+                popup_succes();
+                </script>
+                <?php
           	        echo $_SESSION['success']; 
           	        unset($_SESSION['success']);
                 ?>
-      	        </h3>
+                </h3>
             </div>
-  	        <?php endif ?>
+              <?php }?>
         </div>
     </div>
 
@@ -105,13 +112,15 @@
         </form>
     </div>
     <!-- oldal -->
+        <div class="kep">
+        </div>
     <div class="main">
     <div id="Ismerteto" class="page" >
         <div class="page_content">
             <h1>SzSkönyvelés</h1>
             <h2>
                 Ha egy megbízható könyvelést keres, akkor jó helyen jár.
-                Pécs és környékén kedvező áron segítünk önnek könyvelni és az ügyeit intézni.
+                Baranya megye és környékén kedvező áron segítünk önnek könyvelni és az ügyeit intézni.
             </h2>    
         </div>
         <div id="Arak" class="page_content">
@@ -120,16 +129,16 @@
             <h2>ár2:####</h2>
             <h2>Hosszab távú könyvelésnél lehet ár ajánlatot kérni. </h2>
         </div>
-        <div id="comm" class="page_content">
-            <h1>Elérhetőség</h1>
-            <h2><i class="fas fa-map-marker-alt"></i>Pécs és környéke</h2>
-            <h2><i class="fas fa-phone-alt"></i>0620 ###-####</h2>
-            <h2><i class="fas fa-envelope"></i>hencz###@gmail.com</h2>
+            <div id="Elerhetoseg" class="page_content">
+                <h1>Elérhetőség</h1>
+                <h2><i class="fas fa-map-marker-alt"></i>Pécs és környéke</h2>
+                <h2><i class="fas fa-phone-alt"></i>0620 ###-####</h2>
+                <h2><i class="fas fa-envelope"></i>hencz###@gmail.com</h2>
+            </div>
+            <div id="Ertekelesek" class="page_content">
+                <h1>Értékelések</h1>
+            </div>
         </div>
-        <div id="Ertekelesek" class="page_content">
-            <h1>Értékelések</h1>
-        </div>
-    </div>
     </div>
 </body>
 </html>

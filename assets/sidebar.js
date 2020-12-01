@@ -1,10 +1,4 @@
 
-function openNav(){
-        document.getElementById("mySidenav").style.width = "250px";
-}
-function closeNav(){
-        document.getElementById("mySidenav").style.width = "0px";
-}
 function mozgas_1(){
     element = document.getElementById("Ismerteto");
     element.scrollIntoView({behavior: "smooth"});

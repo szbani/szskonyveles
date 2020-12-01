@@ -3,6 +3,7 @@ function Lbtn(){
     modal.style.display = "block";
     modal = document.getElementById("Rpopup");
     modal.style.display = "none";
+    closeNav();
     }
 
 function Lclosebtn() {
@@ -15,6 +16,7 @@ function Rbtn () {
     modal.style.display = "block";
     modal = document.getElementById("Lpopup");
     modal.style.display = "none";
+    closeNav();
     }
 
 function Rclosebtn() {
@@ -32,3 +34,8 @@ window.onclick = function(e){
             modal.style.display = "none";
         }
     }
+function popup_succes(){
+    document.getElementById("popup_succes").style.display = "block";
+            setTimeout(function () { document.getElementById("popup_succes").style.display = "none"; }, 1000);
+        }
+

@@ -1,60 +1,73 @@
 /*oldal menü*/
-.button{
+.sidenav{
     position: fixed;
     font-size: 30px;
     color: lavender;
-    background-color: #111;
-    height: 100%;
-    width: 25px;
-    padding: 16px;
+    background-color:  #212121  ;
+    width: 100%;
+    height: auto;
+    
+}
+.user_information {
+    position: absolute;
+    float: none;
+    right: 10px;
+    text-align: right;
+    font-size: 20px;
+    padding: inherit;
+    margin: 10px;
+}
+.user_information button{
+    background-color:  #607d8b ;
+    font-size: 15px;
+    border: 2px solid #546e7a ;
     cursor: pointer;
+    padding: 1px;
+    vertical-align: middle;
+    font-weight: bold;
 }
-.sidenav{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
-}
+.user_information button:hover{
+background-color:  #b0bec5;
 
-.sidenav a {
+}
+.logout{
+    color: red;
+    cursor: pointer;
+    text-align: center;
+}
+.logout:hover{
+    color: royalblue;
+}
+.sidenav_btns{
+    width: 35%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.sidenav_btns a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
-    display:  block;
+    display: block;
+    float: left;
     transition: 0.3s;
     cursor: pointer;
+    border: 1px solid  #222222 ;
+    border-bottom: 0px;
+    border-top: 0px;
+    text-align: center;
+    padding: 20px;
 }
-
 .sidenav a:hover{
     color:#f1f1f1;
+    background-color: rgba(27, 27, 27, 0.8);
+}
+.username{
+    text-align: center;
+    font-weight: bold;
 }
 
-.sidenav .closebtn{
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-.Login_Register{
-    padding: 1vw;
-    padding-left: 2vw;
-}
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-    
-@media screen and (max-width: 700px){
-    .button{
-        height: 30px;
-        width: 100%;
-    }
-  }
 }
