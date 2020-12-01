@@ -7,7 +7,7 @@ $email    = "";
 $errors = array(); 
 
 // csatlakozás az adatbázishoz
-$db = mysqli_connect('localhost', 'root', '', 'registration');
+$db = mysqli_connect('localhost', 'id15224852_users', '-r$>mlRonA>3YLJw', 'id15224852_register');
 
 // regisztrálás
 if (isset($_POST['reg_user'])) {
@@ -48,7 +48,7 @@ if (isset($_POST['reg_user'])) {
   			  VALUES('$username', '$email', '$password')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
-  	$_SESSION['success'] = "Be vagy jelentkezve";
+  	$_SESSION['success'] = "Sikeres regisztáció";
   	header('location: index.php');
   }
 }
@@ -76,9 +76,4 @@ if (isset($_POST['login_user'])) {
         }
     }
   }
-  
-if(isset($_POST['logout_user'])){
-    unset($_SESSION["username"]);
-    header("Location:index.php");
-}
   ?>

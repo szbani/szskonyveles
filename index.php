@@ -18,22 +18,22 @@
 <body>
     <!-- oldalmenü   -->
     <div class="sidenav">
-    <div class="user_information">
-        <?php if (isset($_SESSION['username'])) { ?>
-            <strong><p class="username"><?php echo $_SESSION['username']; ?></strong></p>
-            <a href="logout.php" name="logout_user" class="logout">Kijelentkezés</a>
+        <div class="user_information">
+            <?php if (isset($_SESSION['username'])) { ?>
+                <strong><p class="username"><?php echo $_SESSION['username']; ?></strong></p>
+                <a href="logout.php" class="logout">Kijelentkezés</a>
 
-        <?php }else{ ?>
-                <p>Jelentkezz be</p>
+            <?php }else{ ?>
+
                 <button onclick="Lbtn()">Bejelentkezés</button>
                 <button onclick="Rbtn()">Regisztráció</button>
-        <?php }?>
+            <?php }?>
         </div>
         <div class="sidenav_btns">
-        <a onclick="mozgas_1()"><i class="fas fa-home"></i>Ismertető</a>
-        <a onclick="mozgas_2()"><i class="fas fa-coins"></i>Árak</a>
-        <a onclick="mozgas_3()"><i class="fas fa-phone"></i>Elérhetőség</a>
-        <a onclick="mozgas_4()"><i class="fas fa-comment"></i>Értékelések</a>
+            <a onclick="mozgas_1()"><i class="fas fa-home"></i>Ismertető</a>
+            <a onclick="mozgas_2()"><i class="fas fa-coins"></i>Árak</a>
+            <a onclick="mozgas_3()"><i class="fas fa-phone"></i>Elérhetőség</a>
+            <a onclick="mozgas_4()"><i class="fas fa-comment"></i>Értékelések</a>
         </div>
     </div>
     <!-- sikeres regisztráció -->
@@ -41,14 +41,12 @@
         <div class="content_succes">
   	        <?php if (isset($_SESSION['success'])) { ?>
             <div class="error success" >
-      	        <h3>
-                  <p >Sikeres regisztáció</p>
                 <script type="text/javascript">
                 popup_succes();
                 </script>
+      	        <h3>                
                 <?php
           	        echo $_SESSION['success']; 
-          	        unset($_SESSION['success']);
                 ?>
                 </h3>
             </div>
@@ -62,7 +60,7 @@
   	    <h2>Bejelentkezés</h2>
         </div>
         <form method="post">
-  	    <?php include('errors.php'); ?>
+  	    <?php include('errorslog.php'); ?>
   	    <div class="input-group">
   		    <label>Felhasználónév</label>
   		    <input type="text" name="username" >
