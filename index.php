@@ -25,7 +25,7 @@
 
             <?php }else{ ?>
 
-                <button onclick="Lbtn()">Bejelentkezés</button>
+                <button onclick="Lbtn()">Bejelentkezés</button><br>
                 <button onclick="Rbtn()">Regisztráció</button>
             <?php }?>
         </div>
@@ -46,7 +46,7 @@
                 </script>
       	        <h3>                
                 <?php
-          	        echo $_SESSION['success']; 
+          	        echo $_SESSION['success'];
                 ?>
                 </h3>
             </div>
@@ -110,33 +110,36 @@
         </form>
     </div>
     <!-- oldal -->
-        <div class="kep">
-        </div>
-    <div class="main">
-    <div id="Ismerteto" class="page" >
-        <div class="page_content">
-            <h1>SzSkönyvelés</h1>
-            <h2>
-                Ha egy megbízható könyvelést keres, akkor jó helyen jár.
-                Baranya megye és környékén kedvező áron segítünk önnek könyvelni és az ügyeit intézni.
-            </h2>    
-        </div>
-        <div id="Arak" class="page_content">
-            <h1>Árak</h1>
-            <h2>ár1:####</h2>
-            <h2>ár2:####</h2>
-            <h2>Hosszab távú könyvelésnél lehet ár ajánlatot kérni. </h2>
-        </div>
-            <div id="Elerhetoseg" class="page_content">
-                <h1>Elérhetőség</h1>
-                <h2><i class="fas fa-map-marker-alt"></i>Pécs és környéke</h2>
-                <h2><i class="fas fa-phone-alt"></i>0620 ###-####</h2>
-                <h2><i class="fas fa-envelope"></i>hencz###@gmail.com</h2>
-            </div>
-            <div id="Ertekelesek" class="page_content">
-                <h1>Értékelések</h1>
-            </div>
+    <div class="kep">
+        <div class="blur">
+        <h1>SzSkönyvelés</h1> 
+        <h3>Precíz megbízható könyvelés Baranya megye terültén.</h3>
         </div>
     </div>
+        <div class="main">
+                <div id="Ismerteto" class="page_content">
+                    <h1>SzSkönyvelés</h1>
+                    <h2>
+                        Ha egy megbízható könyvelést keres, akkor jó helyen jár.
+                        Baranya megye és környékén kedvező áron segítünk önnek könyvelni és az ügyeit intézni.
+                    </h2>    
+                </div>
+                <div id="Arak" class="page_content">
+                    <h1>Árak</h1>
+                    <h2>ár1:####</h2>
+                    <h2>ár2:####</h2>
+                    <h2>Hosszab távú könyvelésnél lehet ár ajánlatot kérni. </h2>
+                </div>
+                <div id="Elerhetoseg" class="page_content">
+                    <h1>Elérhetőség</h1>
+                    <h2><i class="fas fa-map-marker-alt"></i>Pécs és környéke</h2>
+                    <h2><i class="fas fa-phone-alt"></i>0620 ###-####</h2>
+                    <h2><i class="fas fa-envelope"></i>hencz###@gmail.com</h2>
+                </div>
+                <div id="Ertekelesek" class="page_content">
+                    <h1>Értékelések</h1>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
