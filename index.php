@@ -117,7 +117,7 @@
         </div>
     </div>
         <div class="main">
-         <div class="main_content">
+         <div class="page">
             <div id="Ismerteto" class="page_content">
                     <h1>SzSkönyvelés</h1>
                     <h2>
@@ -128,7 +128,7 @@
         </div>
         </div>
         <div class="main1">
-            <div class="main1_content">
+            <div class="page">
                 <div id="Arak" class="page_content">
                     <h1>Árak</h1>
                     <h2>ár1:####</h2>
@@ -138,7 +138,7 @@
             </div>
         </div>
         <div class="main2">
-        <div class="main2_content">
+        <div class="page">
             <div id="Elerhetoseg" class="page_content">
                     <h1>Elérhetőség</h1>
                     <h2><i class="fas fa-map-marker-alt"></i>Pécs és környéke</h2>
@@ -148,7 +148,7 @@
             </div>
         </div>
         <div class="main3">
-            <div class="main3_content">
+            <div class="page">
                 <div id="Ertekelesek" class="page_content">
                     <h1>Értékelések</h1>
                 </div>
