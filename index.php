@@ -11,6 +11,8 @@
     <link rel='stylesheet' type='text/css' media='screen' href='assets/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/sidebar.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/kepek.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/bottomnav.css'>
     <script src="https://kit.fontawesome.com/1d71ea3fec.js" crossorigin="anonymous"></script>
     <script src='assets/sidebar.js'></script>
     <script src='assets/modal.js'></script>
@@ -112,28 +114,40 @@
     <!-- oldal -->
     <div class="kep">
         <div class="blur">
-        <h1>SzSkönyvelés</h1> 
+        <h1>Szabó Sándorné Könyvelés</h1> 
         <h3>Precíz megbízható könyvelés Baranya megye terültén.</h3>
+        <h2>Hívjon most! +36-20-284-4288</h2>
         </div>
     </div>
         <div class="main">
-         <div class="page">
-            <div id="Ismerteto" class="page_content">
-                    <h1>SzSkönyvelés</h1>
-                    <h2>
-                        Ha egy megbízható könyvelést keres, akkor jó helyen jár.
-                        Baranya megye és környékén kedvező áron segítünk önnek könyvelni és az ügyeit intézni.
-                    </h2>    
+            <div class="page"id="Ismerteto">
+                <div class="kep1"><div class="blur"></div></div>
+                    <div class="kepmellet" style="background-color: rgba(255, 255, 255, 0.1)">
+                        <ul>
+                            <h2>
+                                <li>Több mint 20 éves könyvelő, könyvelés tapasztalat</li>
+                                <li>Új vállalkozások könyvelés specialistája. Kft., Bt.,<br> egyéni vállalkozások könyvelése</li>
+                                <li>Megbízhatóság, kedvező árak</li>
+                                <li>Garancia a büntetések elkerülésére, precíz munka határidőre</li>
+                                <li>Naprakészek vagyunk a NAV jogszabályokban</li>
+                                <li>Leinformálható referenciák, kedvező könyvelés árak</li>
+                            </h2>
+                        </ul>
+                    </div>
+                
             </div>
-        </div>
         </div>
         <div class="main1">
             <div class="page">
                 <div id="Arak" class="page_content">
-                    <h1>Árak</h1>
-                    <h2>ár1:####</h2>
-                    <h2>ár2:####</h2>
-                    <h2>Hosszab távú könyvelésnél lehet ár ajánlatot kérni. </h2>
+                    <h1>Ár</h1>
+                    <h2>Bérszámfejtés: 2.500Ft<br>
+                    KATA-s vállalkozó: 5.000Ft<br>
+                    Egyéni vállakozó: 10.000Ft<br>
+                    Alapítvány, egyéb szervezet: 16.000FT<br>
+                    Társas vállalkozás(Bt, Kft, stb.): 20.000<br>
+                    Végelszámolás összköltsége: 80.000Ft</h2>
+                    <h2>Hívjon és kérjen ár ajánlatot</h2>
                 </div>
             </div>
         </div>
@@ -141,9 +155,9 @@
         <div class="page">
             <div id="Elerhetoseg" class="page_content">
                     <h1>Elérhetőség</h1>
-                    <h2><i class="fas fa-map-marker-alt"></i>Pécs és környéke</h2>
-                    <h2><i class="fas fa-phone-alt"></i>0620 ###-####</h2>
-                    <h2><i class="fas fa-envelope"></i>hencz###@gmail.com</h2>
+                    <h2><i class="fas fa-map-marker-alt"></i>Baranya megye és környéke</h2><br>
+                    <h2><i class="fas fa-phone-alt"></i>+36-20-284-4288</h2><br>
+                    <h2><i class="fas fa-envelope"></i>henczzsu@gmail.com</h2><br>
             </div>
             </div>
         </div>
@@ -153,6 +167,9 @@
                     <h1>Értékelések</h1>
                 </div>
             </div>
+        </div>
+        <div class="bottomnav">
+
         </div>
 </body>
 </html>
