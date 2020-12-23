@@ -26,14 +26,14 @@
 }
 .changepopup{
   text-decoration-style: underline;
-  color: blue;
+  color: #44c77d;
   cursor: pointer;
 }
 .header {
   width: 20%;
   margin: 50px auto 0px;
   color: white;
-  background: rgba(46, 139, 214, 0.959);
+  background:  #414141;
   text-align: center;
   border: 1px solid #B0C4DE;
   border-bottom: none;
@@ -44,7 +44,7 @@
   margin: 0px auto;
   padding: 20px;
   border: 1px solid #B0C4DE;
-  background: white;
+  background: rgb(248,248,255);
   border-radius: 0px 0px 10px 10px;
 }
 .input-group {
@@ -67,9 +67,14 @@
   padding: 10px;
   font-size: 15px;
   color: white;
-  background: rgba(50, 163, 255,0.9);
+  background:#414141;
   border: none;
   border-radius: 5px;
+  transition: background 0.3s;
+}
+.btn:hover{
+  cursor: pointer;
+  background-color:  #44c77d;
 }
 .error {
   width: 92%; 

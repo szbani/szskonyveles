@@ -63,6 +63,7 @@
     <!--  felugró menü (bejelentkezés)  -->
     <div id="Lpopup" class="popup">
         <div class="header">
+        <span onclick="Lclosebtn()" class="closebtn">&times;</span>
   	    <h2>Bejelentkezés</h2>
         </div>
         <form method="post">
@@ -120,7 +121,7 @@
         <div class="blur">
         <h1>Szabó Sándorné Könyvelés</h1> 
         <h3>Precíz megbízható könyvelés Baranya megye terültén.</h3>
-        <h2>Hívjon most! +36-20-284-4288</h2>
+        <h2>Hívjon most! +36-20-***-****</h2>
         </div>
     </div>
         <div class="main">
@@ -142,7 +143,7 @@
             </div>
         </div>
         <div class="main1">
-            <div class="page">
+            
                 <div id="Arak" class="page_content">
                     <h1>Ár</h1>
                     <h2>Bérszámfejtés: 2.500Ft<br>
@@ -153,28 +154,29 @@
                     Végelszámolás összköltsége: 80.000Ft</h2>
                     <h2>Hívjon és kérjen ár ajánlatot</h2>
                 </div>
-            </div>
+            
         </div>
         <div class="main2">
-        <div class="page">
-            <div id="Elerhetoseg" class="page_content">
-                    <h1>Elérhetőség</h1>
+            
+                <div id="Elerhetoseg" class="page_content">
+                    <h1>Elérhetőségeink</h1>
+                    <h2>Keressen minket bizalommal könyvelés, bérszámfejtés vagy TB ügyintézés miatt akár telefonon, e-mail-ben, vagy személyesen. Munkatársaink rövid időn belül választ adnak Önnek bármilyen kérdésére! Árajánlat kérés itt. </h2>
                     <h2><i class="fas fa-map-marker-alt"></i>Baranya megye és környéke</h2><br>
-                    <h2><i class="fas fa-phone-alt"></i>+36-20-284-4288</h2><br>
+                    <h2><i class="fas fa-phone-alt"></i>+36-20-***-****</h2><br>
                     <h2><i class="fas fa-envelope"></i>henczzsu@gmail.com</h2><br>
-            </div>
-            </div>
+                </div>
+            
         </div>
-        <div class="main3">
+        <!--<div class="main3">
             <div class="page">
                 <div id="Ertekelesek" class="page_content">
                     <h1>Értékelések</h1>
                 </div>
             </div>
-        </div>
-        
-        <div class="bottomnav">
+        </div>-->
+        <!-- oldal alja -->
+    <div class="bottomnav">
 
-        </div>
+    </div>
 </body>
 </html>
