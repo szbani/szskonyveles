@@ -1,4 +1,8 @@
 
+function mozgas_0(){
+    scrollTo({top,behavior: "smooth"});
+}
+
 function mozgas_1(){
     element = document.getElementById("Ismerteto");
     element.scrollIntoView({block:"center", behavior: "smooth"});

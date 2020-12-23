@@ -5,37 +5,41 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     
-    <title>SzSKonyveles</title>
+    <title>Szabó Sándorné könyvelés</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     
     <link rel='stylesheet' type='text/css' media='screen' href='assets/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/sidebar.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/kepek.css'>
+    <link rel="stylesheet" type="text/css" href="assets/purecookie.css" async />
     <link rel='stylesheet' type='text/css' media='screen' href='assets/bottomnav.css'>
     <script src="https://kit.fontawesome.com/1d71ea3fec.js" crossorigin="anonymous"></script>
     <script src='assets/sidebar.js'></script>
     <script src='assets/modal.js'></script>
+    <script src="assets/purecookie.js" async></script>
 </head>
 <body>
     <!-- oldalmenü   -->
     <div class="sidenav">
-        <div class="user_information">
+    <div class="sidenav_btns">
+
+            <a onclick="mozgas_0()">Szabó Sándorné könyvelés</a>
+            <a onclick="mozgas_1()"><i class="fas fa-home"></i>Ismertető</a>
+            <a onclick="mozgas_2()"><i class="fas fa-coins"></i>Árak</a>
+            <a onclick="mozgas_3()"><i class="fas fa-phone"></i>Elérhetőség</a>
+            <a onclick="mozgas_4()"><i class="fas fa-comment"></i>Értékelések</a>
+            <div class="right">
             <?php if (isset($_SESSION['username'])) { ?>
                 <strong><p class="username"><?php echo $_SESSION['username']; ?></strong></p>
                 <a href="logout.php" class="logout">Kijelentkezés</a>
 
             <?php }else{ ?>
 
-                <button onclick="Lbtn()">Bejelentkezés</button><br>
-                <button onclick="Rbtn()">Regisztráció</button>
+                <a onclick="Lbtn()">Bejelentkezés <a onclick="Rbtn()">Regisztráció</a></a>
+                
             <?php }?>
-        </div>
-        <div class="sidenav_btns">
-            <a onclick="mozgas_1()"><i class="fas fa-home"></i>Ismertető</a>
-            <a onclick="mozgas_2()"><i class="fas fa-coins"></i>Árak</a>
-            <a onclick="mozgas_3()"><i class="fas fa-phone"></i>Elérhetőség</a>
-            <a onclick="mozgas_4()"><i class="fas fa-comment"></i>Értékelések</a>
+            </div>
         </div>
     </div>
     <!-- sikeres regisztráció -->
@@ -168,6 +172,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="bottomnav">
 
         </div>
