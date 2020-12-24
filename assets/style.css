@@ -63,6 +63,28 @@
   border-radius: 5px;
   border: 1px solid gray;
 }
+
+
+.input-group-user{
+display: inline-block;
+}
+
+.input-group-user label {
+  display: block;
+  text-align: left;
+  margin: 3px;
+}
+
+.input-group-user input {
+  height: 30px;
+  width: 8vw;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+
 .btn {
   padding: 10px;
   font-size: 15px;

@@ -10,6 +10,7 @@
 }
 .right{
     float: right;
+    text-align: left;
     font-weight: bold;
 }
 
@@ -35,8 +36,17 @@
     background-color: rgba(27, 27, 27, 0.8);
 }
 .username{
-    text-align: center;
+    color: rgba(27, 27, 27, 0.8);
+    display: inline;
+    float: right;
+    padding-right: 3%;
+    text-align: right;
+}
+.username h5{
     font-weight: bold;
+}
+.username p{
+    color: #44c77d;
 }
 .logout{
     color: red;

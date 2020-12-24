@@ -22,24 +22,26 @@
 <body>
     <!-- oldalmenü   -->
     <div class="sidenav">
-    <div class="sidenav_btns">
+        <div class="sidenav_btns">
 
             <a onclick="mozgas_0()">Szabó Sándorné könyvelés</a>
             <a onclick="mozgas_1()"><i class="fas fa-home"></i>Ismertető</a>
             <a onclick="mozgas_2()"><i class="fas fa-coins"></i>Árak</a>
             <a onclick="mozgas_3()"><i class="fas fa-phone"></i>Elérhetőség</a>
             <a onclick="mozgas_4()"><i class="fas fa-comment"></i>Értékelések</a>
-            <div class="right">
-            <?php if (isset($_SESSION['username'])) { ?>
-                <strong><p class="username"><?php echo $_SESSION['username']; ?></strong></p>
+            
+            <?php if (isset($_SESSION['keresztnev'])) { ?>
+                <div class="right">
                 <a href="logout.php" class="logout">Kijelentkezés</a>
-
+                </div>
+                <div class="username">
+                <h5>Be vagy jelentkezve</h5><p><?php echo $_SESSION['keresztnev']; ?></p>
+                </div>
             <?php }else{ ?>
-
+                <div class="right">
                 <a onclick="Lbtn()">Bejelentkezés <a onclick="Rbtn()">Regisztráció</a></a>
-                
-            <?php }?>
-            </div>
+                </div>
+             <?php }?> 
         </div>
     </div>
     <!-- sikeres regisztráció -->
@@ -69,8 +71,8 @@
         <form method="post">
   	    <?php include('errorslog.php'); ?>
   	    <div class="input-group">
-  		    <label>Felhasználónév</label>
-  		    <input type="text" name="username" >
+  		    <label>Email</label>
+  		    <input type="text" name="email" >
   	    </div>
   	    <div class="input-group">
   		    <label>Jelszó</label>
@@ -92,10 +94,14 @@
         </div>
         <form method="post">
   	    <?php include('errors.php'); ?>
-  	    <div class="input-group">
-  	        <label>Felhasználónév</label>
-            <input type="text" name="username" value="<?php echo $username; ?>">
+  	    <div class="input-group-user">
+  	        <label>Vezetéknév</label>
+            <input type="text" name="vezeteknev" value="<?php echo $keresztnev; ?>">
   	    </div>
+        <div class="input-group-user" style="float:right">
+            <label>Keresztnév</label>
+            <input type="text" name="keresztnev" value="<?php echo $vezeteknev; ?>">
+        </div>
   	    <div class="input-group">
   	        <label>Email</label>
   	        <input type="email" name="email" value="<?php echo $email; ?>">
@@ -127,19 +133,18 @@
         <div class="main">
             <div class="page"id="Ismerteto">
                 <div class="kep1"><div class="blur"></div></div>
-                    <div class="kepmellet" style="background-color: rgba(255, 255, 255, 0.1)">
-                        <ul>
-                            <h2>
-                                <li>Több mint 20 éves könyvelő, könyvelés tapasztalat</li>
-                                <li>Új vállalkozások könyvelés specialistája. Kft., Bt.,<br> egyéni vállalkozások könyvelése</li>
-                                <li>Megbízhatóság, kedvező árak</li>
-                                <li>Garancia a büntetések elkerülésére, precíz munka határidőre</li>
-                                <li>Naprakészek vagyunk a NAV jogszabályokban</li>
-                                <li>Leinformálható referenciák, kedvező könyvelés árak</li>
-                            </h2>
-                        </ul>
-                    </div>
-                
+                 <div class="kepmellet" style="background-color: rgba(255, 255, 255, 0.1)">
+                    <ul>
+                        <h2>
+                            <li>Több mint 20 éves könyvelő, könyvelés tapasztalat</li>
+                            <li>Új vállalkozások könyvelés specialistája. Kft., Bt.,<br> egyéni vállalkozások könyvelése</li>
+                            <li>Megbízhatóság, kedvező árak</li>
+                            <li>Garancia a büntetések elkerülésére, precíz munka határidőre</li>
+                            <li>Naprakészek vagyunk a NAV jogszabályokban</li>
+                            <li>Leinformálható referenciák, kedvező könyvelés árak</li>
+                        </h2>
+                    </ul>
+                </div> 
             </div>
         </div>
         <div class="main1">
@@ -163,7 +168,7 @@
                     <h2>Keressen minket bizalommal könyvelés, bérszámfejtés vagy TB ügyintézés miatt akár telefonon, e-mail-ben, vagy személyesen. Munkatársaink rövid időn belül választ adnak Önnek bármilyen kérdésére! Árajánlat kérés itt. </h2>
                     <h2><i class="fas fa-map-marker-alt"></i>Baranya megye és környéke</h2><br>
                     <h2><i class="fas fa-phone-alt"></i>+36-20-***-****</h2><br>
-                    <h2><i class="fas fa-envelope"></i>henczzsu@gmail.com</h2><br>
+                    <h2><i class="fas fa-envelope"></i>szabosandornekonyveles@gmail.com</h2><br>
                 </div>
             
         </div>
