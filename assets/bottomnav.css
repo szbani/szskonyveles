@@ -1,5 +1,37 @@
 .bottomnav{
     width: 100%;
-    height: 150px;
+    height: auto;
     background-color: #232323;
+    color:#f1f1f1;
+}
+.bottomnavlist{
+    padding-left: 20%;
+}
+.bottomnav ul{
+    font-weight: bold;
+    padding-inline: 20px;
+    display: inline-table;
+    font-size: 120%;
+    padding-bottom: 20px;
+}
+.bottomnavlist h2{
+    padding-bottom: 5px;
+}
+.bottomnav li{
+    font-size: 80%;
+    color: #A0A0A0;
+    font-weight: bold;
+    list-style: none;
+}
+.bottomnav a{
+    color: #44c77d;
+    cursor: pointer;
+    padding-inline: 10px;
+}
+.bottomnav a:hover{
+    color:  #A0A0A0;
+}
+.bottomnavlinkek{
+    width: max-content;
+    margin: 0 auto;
 }

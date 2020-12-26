@@ -1,7 +1,4 @@
-
-
-<?php
-session_start();
+<?php session_start();
 unset($_SESSION['keresztnev']);
 unset($_SESSION['email']);
 session_destroy();

@@ -68,8 +68,8 @@ if (isset($_POST['login_user'])) {
         $password = md5($password);
         $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
         $results = mysqli_query($db, $query);
+        $row = mysqli_fetch_assoc($results);
         if (mysqli_num_rows($results) == 1) {
-          $row = mysqli_fetch_assoc($results);
           $_SESSION['keresztnev'] = $row['keresztnev'];
           $_SESSION['email'] = $email;
           $_SESSION['success'] = "Be vagy jelentkezve";

@@ -181,7 +181,27 @@
         </div>-->
         <!-- oldal alja -->
     <div class="bottomnav">
-
+              <div class="bottomnavlist">
+                <ul><h2>Szabó Sándorné könyvelés</h2>
+                <li>ADÓSZÁM: #######</li>
+                <li>7940 SZENTLŐRINC</li>
+                <li>DEÁK FERENC UTCA 5</li>
+                </ul>
+                <ul>
+                 <h2>PROFI KÖNYVELÉS</h2>
+                <li>Könyvelés</li>
+                <li>Adóbevallás</li>
+                <li>Bérszámfejtés</li>
+                <li>TB és Bérügyintézés</li>
+                <li>SZJA bevallás készítése</li>
+              </ul>
+              </div>
+              <div class="bottomnavlinkek">
+                <a onclick="mozgas_1()">Ismertető</a>
+                <a onclick="mozgas_2()">Árak</a>
+                <a onclick="mozgas_3()">Elérhetőségek</a>
+                <a onclick="mozgas_4()">Értékelések</a>
+              </h4>
     </div>
 </body>
 </html>
