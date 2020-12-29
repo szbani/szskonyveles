@@ -20,5 +20,10 @@ function mozgas_3(){
 
 function mozgas_4(){
     element = document.getElementById("Ertekelesek");
+    
     element.scrollIntoView({block:"center", behavior: "smooth"});
+    
 }
+
+
+    

@@ -1,7 +1,7 @@
-<?php  if (count($errors) > 0) : ?>
+<?php  if (count($errorslog) > 0) : ?>
   <div class="error">
-  	<?php foreach ($errors as $error) : ?>
-		<p><?php echo $error ?></p>
+  	<?php foreach ($errorslog as $errorlog) : ?>
+		<p><?php echo $errorlog ?></p>
 		<script type="text/javascript">
                 Lbtn();
         </script>

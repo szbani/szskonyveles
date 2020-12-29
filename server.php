@@ -5,6 +5,7 @@ $vezeteknev = "";
 $keresztnev = "";
 $email    = "";
 $errors = array(); 
+$errorslog = array(); 
 
 // csatlakozás az adatbázishoz
 $db = mysqli_connect('localhost', 'id15224852_users', '-r$>mlRonA>3YLJw', 'id15224852_register');
@@ -58,13 +59,13 @@ if (isset($_POST['login_user'])) {
     $password = mysqli_real_escape_string($db, $_POST['password']);
   
     if (empty($email)) {
-        array_push($errors, "Hiányzik az email");
+        array_push($errorslog, "Hiányzik az email");
     }
     if (empty($password)) {
-        array_push($errors, "Hiányzik a jelszó");
+        array_push($errorslog, "Hiányzik a jelszó");
     }
   
-    if (count($errors) == 0) {
+    if (count($errorslog) == 0) {
         $password = md5($password);
         $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
         $results = mysqli_query($db, $query);
@@ -75,7 +76,7 @@ if (isset($_POST['login_user'])) {
           $_SESSION['success'] = "Be vagy jelentkezve";
           header('location: index.php');
         }else {
-            array_push($errors, "Roszz felhasználónév/jelszó");
+            array_push($errorslog, "Roszz felhasználónév/jelszó");
         }
     }
   }

@@ -1,4 +1,5 @@
 <?php include('server.php') ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -69,7 +70,7 @@
   	    <h2>Bejelentkezés</h2>
         </div>
         <form method="post">
-  	    <?php include('errorslog.php'); ?>
+        <?php include('errorslog.php'); ?>
   	    <div class="input-group">
   		    <label>Email</label>
   		    <input type="text" name="email" >
@@ -93,14 +94,14 @@
   	        <h2>Regisztráció</h2>
         </div>
         <form method="post">
-  	    <?php include('errors.php'); ?>
+        <?php include('errors.php'); ?>
   	    <div class="input-group-user">
   	        <label>Vezetéknév</label>
-            <input type="text" name="vezeteknev" value="<?php echo $keresztnev; ?>">
+            <input type="text" name="vezeteknev" value="<?php echo $vezeteknev; ?>">
   	    </div>
         <div class="input-group-user" style="float:right">
             <label>Keresztnév</label>
-            <input type="text" name="keresztnev" value="<?php echo $vezeteknev; ?>">
+            <input type="text" name="keresztnev" value="<?php echo $keresztnev; ?>">
         </div>
   	    <div class="input-group">
   	        <label>Email</label>
@@ -149,7 +150,7 @@
         </div>
         <div class="main1">
             
-                <div id="Arak" class="page_content">
+                <div id="Arak" >
                     <h1>Ár</h1>
                     <h2>Bérszámfejtés: 2.500Ft<br>
                     KATA-s vállalkozó: 5.000Ft<br>
@@ -163,45 +164,45 @@
         </div>
         <div class="main2">
             
-                <div id="Elerhetoseg" class="page_content">
+                <div id="Elerhetoseg">
                     <h1>Elérhetőségeink</h1>
                     <h2>Keressen minket bizalommal könyvelés, bérszámfejtés vagy TB ügyintézés miatt akár telefonon, e-mail-ben, vagy személyesen. Munkatársaink rövid időn belül választ adnak Önnek bármilyen kérdésére! Árajánlat kérés itt. </h2>
-                    <h2><i class="fas fa-map-marker-alt"></i>Baranya megye és környéke</h2><br>
+                    <h2><i class="fas fa-map-marker-alt"></i>Baranya Megye 7940 Szentlőrinc<br> Deák Ferenc utca 5.</h2><br>
                     <h2><i class="fas fa-phone-alt"></i>+36-20-***-****</h2><br>
                     <h2><i class="fas fa-envelope"></i>szabosandornekonyveles@gmail.com</h2><br>
                 </div>
             
         </div>
-        <!--<div class="main3">
-            <div class="page">
-                <div id="Ertekelesek" class="page_content">
+        <div class="main3">
+            <div class="blur">
+                <div id="Ertekelesek" >
                     <h1>Értékelések</h1>
                 </div>
             </div>
-        </div>-->
+        </div>
         <!-- oldal alja -->
     <div class="bottomnav">
-              <div class="bottomnavlist">
-                <ul><h2>Szabó Sándorné könyvelés</h2>
+        <div class="bottomnavlist">
+            <ul><h2>Szabó Sándorné könyvelés</h2>
                 <li>ADÓSZÁM: #######</li>
                 <li>7940 SZENTLŐRINC</li>
                 <li>DEÁK FERENC UTCA 5</li>
                 </ul>
-                <ul>
+            <ul>
                  <h2>PROFI KÖNYVELÉS</h2>
                 <li>Könyvelés</li>
                 <li>Adóbevallás</li>
                 <li>Bérszámfejtés</li>
                 <li>TB és Bérügyintézés</li>
                 <li>SZJA bevallás készítése</li>
-              </ul>
-              </div>
-              <div class="bottomnavlinkek">
-                <a onclick="mozgas_1()">Ismertető</a>
-                <a onclick="mozgas_2()">Árak</a>
-                <a onclick="mozgas_3()">Elérhetőségek</a>
-                <a onclick="mozgas_4()">Értékelések</a>
-              </h4>
+            </ul>
+        </div>
+        <div class="bottomnavlinkek">
+            <a onclick="mozgas_1()">Ismertető</a>
+            <a onclick="mozgas_2()">Árak</a>
+            <a onclick="mozgas_3()">Elérhetőségek</a>
+            <a onclick="mozgas_4()">Értékelések</a>
+        </div>
     </div>
 </body>
 </html>

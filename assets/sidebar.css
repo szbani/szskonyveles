@@ -55,6 +55,10 @@
 .logout:hover{
     color: royalblue;
 }
+.sidenav_btns a:active{
+    color:#f1f1f1;
+    background-color: rgba(27, 27, 27, 0.8);
+}
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
