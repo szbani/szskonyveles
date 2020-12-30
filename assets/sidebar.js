@@ -5,7 +5,7 @@ function mozgas_0(){
 
 function mozgas_1(){
     element = document.getElementById("Ismerteto");
-    element.scrollIntoView({block:"center", behavior: "smooth"});
+    element.scrollIntoView({top , behavior: "smooth"});
 }
 
 function mozgas_2(){
@@ -18,12 +18,3 @@ function mozgas_3(){
     element.scrollIntoView({block:"center", behavior: "smooth"});
 }
 
-function mozgas_4(){
-    element = document.getElementById("Ertekelesek");
-    
-    element.scrollIntoView({block:"center", behavior: "smooth"});
-    
-}
-
-
-    

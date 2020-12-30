@@ -22,14 +22,12 @@
 </head>
 <body>
     <!-- oldalmenü   -->
-    <div class="sidenav">
-        <div class="sidenav_btns">
-
+    <div class="sidenav" id="navbar">
             <a onclick="mozgas_0()">Szabó Sándorné könyvelés</a>
             <a onclick="mozgas_1()"><i class="fas fa-home"></i>Ismertető</a>
             <a onclick="mozgas_2()"><i class="fas fa-coins"></i>Árak</a>
             <a onclick="mozgas_3()"><i class="fas fa-phone"></i>Elérhetőség</a>
-            <a onclick="mozgas_4()"><i class="fas fa-comment"></i>Értékelések</a>
+            
             
             <?php if (isset($_SESSION['keresztnev'])) { ?>
                 <div class="right">
@@ -40,11 +38,14 @@
                 </div>
             <?php }else{ ?>
                 <div class="right">
-                <a onclick="Lbtn()">Bejelentkezés <a onclick="Rbtn()">Regisztráció</a></a>
+                <a onclick="Lbtn()">Bejelentkezés </a>
+                <a onclick="Rbtn()">Regisztráció</a>
                 </div>
-             <?php }?> 
+             <?php }?>
+                <a href="javascript:void(0);" class="icon" onclick="open()">
+                    <i class="fa fa-bars"></i>
+                </a> 
         </div>
-    </div>
     <!-- sikeres regisztráció -->
     <div id="popup_succes" class="popup_succes">
         <div class="content_succes">
@@ -61,7 +62,7 @@
             </div>
               <?php }?>
         </div>
-    </div>
+        </div>
 
     <!--  felugró menü (bejelentkezés)  -->
     <div id="Lpopup" class="popup">
@@ -86,7 +87,7 @@
   		        Nincs még fiókod? <a onclick="Rbtn()" class="changepopup">Regisztálj</a>
   	        </p>
         </form>
-    </div>
+        </div>
     <!--  felugró menü (regisztárció)  -->
     <div id="Rpopup" class="popup">
         <div class="header">
@@ -122,65 +123,80 @@
   		        Van már fiókod? <a onclick="Lbtn()" class="changepopup">Jelentkezz be</a>
   	        </p>
         </form>
-    </div>
+     </div>
     <!-- oldal -->
     <div class="kep">
         <div class="blur">
-        <h1>Szabó Sándorné Könyvelés</h1> 
-        <h3>Precíz megbízható könyvelés Baranya megye terültén.</h3>
-        <h2>Hívjon most! +36-20-***-****</h2>
-        </div>
-    </div>
-        <div class="main">
-            <div class="page"id="Ismerteto">
-                <div class="kep1"><div class="blur"></div></div>
-                 <div class="kepmellet" style="background-color: rgba(255, 255, 255, 0.1)">
-                    <ul>
-                        <h2>
-                            <li>Több mint 20 éves könyvelő, könyvelés tapasztalat</li>
-                            <li>Új vállalkozások könyvelés specialistája. Kft., Bt.,<br> egyéni vállalkozások könyvelése</li>
-                            <li>Megbízhatóság, kedvező árak</li>
-                            <li>Garancia a büntetések elkerülésére, precíz munka határidőre</li>
-                            <li>Naprakészek vagyunk a NAV jogszabályokban</li>
-                            <li>Leinformálható referenciák, kedvező könyvelés árak</li>
-                        </h2>
-                    </ul>
-                </div> 
+            <h1>Szabó Sándorné Könyvelés</h1> 
+            <h3>Precíz megbízható könyvelés Baranya megye terültén.</h3>
+            <h2>Hívjon most! +36-20-***-****</h2>
             </div>
         </div>
-        <div class="main1">
-            
-                <div id="Arak" >
-                    <h1>Ár</h1>
-                    <h2>Bérszámfejtés: 2.500Ft<br>
-                    KATA-s vállalkozó: 5.000Ft<br>
-                    Egyéni vállakozó: 10.000Ft<br>
-                    Alapítvány, egyéb szervezet: 16.000FT<br>
-                    Társas vállalkozás(Bt, Kft, stb.): 20.000<br>
-                    Végelszámolás összköltsége: 80.000Ft</h2>
-                    <h2>Hívjon és kérjen ár ajánlatot</h2>
-                </div>
-            
+    <div class="main"id="Ismerteto">
+        <ul>
+            <h3><li>Precizitás és tapasztalat!</li></h3>
+            <h2><li>Szakértelem a könyvelésben</li></h2>
+            <h3><li>Ne az olcsó könyvelőt válassza, hanem a megbízhatót!</li></h3>
+            <h2><li>Az Ön vállalkozása többet érdemel!</li></h2>
+            <h3><li>Válassza irodámat</li></h3>
+        </ul>
         </div>
-        <div class="main2">
-            
-                <div id="Elerhetoseg">
+    <div class="main3">
+        <div class="blur">
+            <div class ="main_boxes">
+                <ul>
+                    <h2>Miért?</h2>
+                    <h3>
+                        <li>Mert fontos számunkra,</li>
+                        <li>hogy az Ön vállalkozása</li>
+                        <li>sikeresen működjön úgy,</li>
+                        <li>hogy a könyvelése és</li>
+                        <li>bevallásai pontosan</li>
+                        <li>legyen vezetve és beadva</li>
+                        <li>az illetékes szervek felé.</li>
+                    </h3>
+                </ul>
+                <ul>
+                    <h2>Kinek?</h2>
+                    <h3>
+                        <li>Társas és egyéni</li>
+                        <li>vállalkozásoknak, civil</li>
+                        <li>szervezeteknek, frissen</li>
+                        <li>induló, vagy régen működő</li>
+                        <li>cégeknek egyaránt.</li>
+                    </h3>
+                </ul>
+                <ul>
+                    <h2>Hogyan?</h2>
+                    <h3>
+                        <li>Naprakész könyveléssel, </li>
+                        <li>adó- és üzleti tanácsadással, </li>
+                        <li>összesen több mint 20 éves</li>
+                        <li>tapasztalattal felvértezve.</li>
+                    </h3>
+                </ul>
+            </div>
+        </div>
+        </div>    
+    <div class="main1" id="Arak">
+            <h1>Áraink</h1>
+            <h2>Bérszámfejtés: 2.500Ft<br>
+                KATA-s vállalkozó: 5.000Ft<br>
+                Egyéni vállakozó: 10.000Ft<br>
+                Alapítvány, egyéb szervezet: 16.000FT<br>
+                Társas vállalkozás(Bt, Kft, stb.): 20.000<br>
+                Végelszámolás összköltsége: 80.000Ft</h2>
+            <h2>Hívjon és kérjen ár ajánlatot</h2>  
+        </div>
+    <div class="main2" id="Elerhetoseg">
                     <h1>Elérhetőségeink</h1>
                     <h2>Keressen minket bizalommal könyvelés, bérszámfejtés vagy TB ügyintézés miatt akár telefonon, e-mail-ben, vagy személyesen. Munkatársaink rövid időn belül választ adnak Önnek bármilyen kérdésére! Árajánlat kérés itt. </h2>
                     <h2><i class="fas fa-map-marker-alt"></i>Baranya Megye 7940 Szentlőrinc<br> Deák Ferenc utca 5.</h2><br>
                     <h2><i class="fas fa-phone-alt"></i>+36-20-***-****</h2><br>
                     <h2><i class="fas fa-envelope"></i>szabosandornekonyveles@gmail.com</h2><br>
-                </div>
-            
         </div>
-        <div class="main3">
-            <div class="blur">
-                <div id="Ertekelesek" >
-                    <h1>Értékelések</h1>
-                </div>
-            </div>
-        </div>
-        <!-- oldal alja -->
+    
+    <!-- oldal alja -->
     <div class="bottomnav">
         <div class="bottomnavlist">
             <ul><h2>Szabó Sándorné könyvelés</h2>

@@ -17,12 +17,34 @@ body h2{
     line-height: 150%;
 }
 .main {
-    padding: 20%;
-    padding-top: 5%;
+    padding-top: 2.5%;
     padding-bottom: 2.5%;
     height: auto;
-    background-color: whitesmoke;
-    border-bottom: 3px solid rgba(90, 90, 90, 0.8);
+    background-color: ghostwhite;
+    box-shadow: 0 2px 5px 5px #414141;
+}
+.main ul{
+    width: max-content;
+    margin: 0 auto;
+    list-style: none;
+}
+.main li {
+    text-align: center;
+}
+.main h3{
+    font-size: 140%;
+}
+.main h2{
+    font-size: 200%;
+}
+@media screen and (max-width: 1000px){
+    .main h2{
+        font-size: 140%;
+    }
+    .main h3{
+
+        font-size: 100%;
+    }
 }
 .main1 {
     padding: 20%;
@@ -36,31 +58,71 @@ body h2{
     padding: 20%;
     padding-top: 3%;
     padding-bottom: 2.5%;
-    background-color: whitesmoke;
+    background-color: ghostwhite;
     border-bottom: 3px solid rgba(90, 90, 90, 0.8);
 }
 .main3 {
-
     background-image: url("pics/kep1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    z-index: -1;
     background-position: 0px, 200px, 0px, 0px;
     width: 100%;
-    height: 500px;
+    height: auto;
     border-bottom: 3px solid rgba(90, 90, 90, 0.8);
 }
 .main3 h1{
     padding-top: 5%;
 }
-.page{
-    background-color:  rgb(248,248,255);
-    border-style: groove;
-    height: auto;
-    border-color: rgba(90, 90, 90, 0.1);
-    /*border-radius: 20px;*/
-    border-width: 5px;
-    
+.main_boxes{
+    width: max-content;
+    margin: 0 auto;
 }
+.main_boxes h2{
+    font-size: 30px;
+    text-align: center;
+}
+.main_boxes li {
+    font-size: 110%;
+    list-style: none;
+    padding: 5%;
+    color: black;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.main_boxes ul{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border: solid 1px #414141;
+    height: 230px;
+    width: 280px;
+    margin-inline: 40px;
+    background-color: #414141;
+    display: inline-block;
+    color: #f1f1f1;
+    background-image: -webkit-gradient(
+    linear,
+    center top,
+    center bottom,
+    color-stop(0, #414141),
+    color-stop(18%,#414141),
+    color-stop(20%,#f8f8ff),
+    color-stop(40%,#f8f8ff),
+    color-stop(60%,#f8f8ff),
+    color-stop(100%,#f8f8ff)
+	);
+    box-shadow: 0 2px 5px 5px #232323;
+}
+@media screen and (max-width: 1100px){
+    .main_boxes{
+        display: contents;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin: 0 auto;
+    }
+}
+
 
 @media screen and (max-width: 1000px){
     body h1{
