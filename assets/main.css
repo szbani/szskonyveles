@@ -61,6 +61,16 @@ body h2{
     background-color: ghostwhite;
     border-bottom: 3px solid rgba(90, 90, 90, 0.8);
 }
+.main2 h2{
+    padding-bottom: 3%;
+}
+.main2 h3{
+    display: inline-block;
+    padding-inline: 2%;
+}
+.main2 i{
+    padding-right: 10px;
+}
 .main3 {
     background-image: url("pics/kep1.jpg");
     background-repeat: no-repeat;

@@ -5,12 +5,10 @@
     color:#f1f1f1;
 }
 .bottomnavlist{
-    padding-left: 20%;
+    padding-left: 25%;
 }
 .bottomnav ul{
     font-weight: bold;
-    padding-inline: 20px;
-    display: inline-table;
     font-size: 120%;
     padding-bottom: 20px;
 }
@@ -31,7 +29,19 @@
 .bottomnav a:hover{
     color:  #A0A0A0;
 }
+.row iframe{
+    vertical-align: bottom;
+}
+.row{
+    width: max-content;
+    display: inline-table;
+    padding-inline: 20px;
+}
 .bottomnavlinkek{
+    padding-top: 10px;
+    border-top: solid 2px#414141;
     width: max-content;
     margin: 0 auto;
+    margin-top: 15px;
+    padding-bottom: 10px;
 }

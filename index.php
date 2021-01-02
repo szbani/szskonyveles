@@ -180,44 +180,70 @@
         </div>    
     <div class="main1" id="Arak">
             <h1>Áraink</h1>
-            <h2>Bérszámfejtés: 2.500Ft<br>
-                KATA-s vállalkozó: 5.000Ft<br>
-                Egyéni vállakozó: 10.000Ft<br>
-                Alapítvány, egyéb szervezet: 16.000FT<br>
-                Társas vállalkozás(Bt, Kft, stb.): 20.000<br>
-                Végelszámolás összköltsége: 80.000Ft</h2>
-            <h2>Hívjon és kérjen ár ajánlatot</h2>  
+            <h2>Bérszámfejtés: 2.500Ft/hó<br>
+                KATA-s vállalkozó: 5.000Ft/hó<br>
+                Egyéni vállakozó: 10.000Ft/hó<br>
+                Alapítvány, egyéb szervezet: 16.000FT/hó<br>
+                Társas vállalkozás(Bt, Kft, stb.): 20.000/hó<br>
+                Végelszámolás összköltsége: 80.000Ft/hó</h2>
+                <br>
+            <h2>Hívjon és kérjen ár ajánlatot.</h2>
+            <h4>Az árak a bruttó értéket tartalmazzák.</h4>  
         </div>
     <div class="main2" id="Elerhetoseg">
                     <h1>Elérhetőségeink</h1>
-                    <h2>Keressen minket bizalommal könyvelés, bérszámfejtés vagy TB ügyintézés miatt akár telefonon, e-mail-ben, vagy személyesen. Munkatársaink rövid időn belül választ adnak Önnek bármilyen kérdésére! Árajánlat kérés itt. </h2>
-                    <h2><i class="fas fa-map-marker-alt"></i>Baranya Megye 7940 Szentlőrinc<br> Deák Ferenc utca 5.</h2><br>
-                    <h2><i class="fas fa-phone-alt"></i>+36-20-***-****</h2><br>
-                    <h2><i class="fas fa-envelope"></i>szabosandornekonyveles@gmail.com</h2><br>
+                    <h2>
+                        Keressen minket bizalommal könyvelés, 
+                        bérszámfejtés vagy TB ügyintézés miatt
+                        akár telefonon, e-mail-ben, vagy 
+                        személyesen. Munkatársaink rövid időn
+                        belül választ adnak Önnek bármilyen
+                        kérdésére! Árajánlat kérés itt. 
+                    </h2>
+                    <h3><i class="fas fa-map-marker-alt"></i>Baranya Megye 7940 Szentlőrinc Deák Ferenc utca 5.</h3>
+                    <h3><i class="fas fa-phone-alt"></i><a href="tel:0620*******">+06-20-***-****</a></h3>
+                    <h3><i class="fas fa-envelope"></i><a href="mailto:szabosandornekonyveles@gmail.com">szabosandornekonyveles@gmail.com</a></h3>
         </div>
     
     <!-- oldal alja -->
     <div class="bottomnav">
+    
         <div class="bottomnavlist">
-            <ul><h2>Szabó Sándorné könyvelés</h2>
+            <div class="row">
+            <br>
+            <h2>Szabó Sándorné könyvelés</h2>
+            <ul>
                 <li>ADÓSZÁM: #######</li>
                 <li>7940 SZENTLŐRINC</li>
                 <li>DEÁK FERENC UTCA 5</li>
-                </ul>
+            </ul>
+            </div>
+            <div class="row">
+            <br>
+            <h2>PROFI KÖNYVELÉS</h2>
             <ul>
-                 <h2>PROFI KÖNYVELÉS</h2>
                 <li>Könyvelés</li>
                 <li>Adóbevallás</li>
                 <li>Bérszámfejtés</li>
                 <li>TB és Bérügyintézés</li>
                 <li>SZJA bevallás készítése</li>
             </ul>
+            </div>
+            <div class="row">
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2769.6383550222367!2d17.986725515976044!3d46.03836407911187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4742ab1efa0078cf%3A0xc2a877ffe37799ad!2sSzentl%C5%91rinc%2C%20De%C3%A1k%20Ferenc%20u.%205%2C%207940!5e0!3m2!1sen!2shu!4v1609548848837!5m2!1sen!2shu" width="250" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
+            </div>
         </div>
         <div class="bottomnavlinkek">
             <a onclick="mozgas_1()">Ismertető</a>
             <a onclick="mozgas_2()">Árak</a>
             <a onclick="mozgas_3()">Elérhetőségek</a>
-            <a onclick="mozgas_4()">Értékelések</a>
+            <?php if(isset($_SESSION['keresztnev'])){?>
+            <a onclick="Lbtn()">Bejelntkezés</a>
+            <a onclick="Rbtn()">Regisztráció</a>
+            <?php }else{?>
+            <a onclick="Rbtn()">Kijelentkezés</a>
+            <?php }?>
         </div>
     </div>
 </body>
