@@ -10,9 +10,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     
     <link rel='stylesheet' type='text/css' media='screen' href='assets/main.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='assets/sidebar.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/kepek.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/navbar.css'>
     <link rel="stylesheet" type="text/css" href="assets/purecookie.css" async />
     <link rel='stylesheet' type='text/css' media='screen' href='assets/bottomnav.css'>
     <script src="https://kit.fontawesome.com/1d71ea3fec.js" crossorigin="anonymous"></script>
@@ -22,30 +22,30 @@
 </head>
 <body>
     <!-- oldalmenü   -->
-    <div class="sidenav" id="navbar">
-            <a onclick="mozgas_0()">Szabó Sándorné könyvelés</a>
-            <a onclick="mozgas_1()"><i class="fas fa-home"></i>Ismertető</a>
-            <a onclick="mozgas_2()"><i class="fas fa-coins"></i>Árak</a>
-            <a onclick="mozgas_3()"><i class="fas fa-phone"></i>Elérhetőség</a>
-            
-            
-            <?php if (isset($_SESSION['keresztnev'])) { ?>
-                <div class="right">
-                <a href="logout.php" class="logout">Kijelentkezés</a>
-                </div>
-                <div class="username">
-                <h5>Be vagy jelentkezve</h5><p><?php echo $_SESSION['keresztnev']; ?></p>
-                </div>
-            <?php }else{ ?>
-                <div class="right">
-                <a onclick="Lbtn()">Bejelentkezés </a>
-                <a onclick="Rbtn()">Regisztráció</a>
-                </div>
-             <?php }?>
-                <a href="javascript:void(0);" class="icon" onclick="open()">
-                    <i class="fa fa-bars"></i>
-                </a> 
+    <ul class="navbar">
+        <div class="left">
+            <li><a onclick="mozgas_0()">Szabó Sándorné könyvelés</a></li>
+            <li><a onclick="mozgas_1()"><i class="fas fa-home"></i>Ismertető</a></li>
+            <li><a onclick="mozgas_2()"><i class="fas fa-coins"></i>Árak</a></li>
+            <li><a onclick="mozgas_3()"><i class="fas fa-phone"></i>Elérhetőség</a></li>
         </div>
+        <?php if (isset($_SESSION['keresztnev'])) { ?>
+        <div class="right">
+            <li class="right"><a href="logout.php" class="logout">Kijelentkezés</a></li>
+        </div>
+        <div class="username">
+            <li><h5>Be vagy jelentkezve</h5><p><?php echo $_SESSION['keresztnev']; ?></p></li>
+        </div>
+            <?php }else{ ?>
+        <div class="right">
+            <li><a onclick="Lbtn()">Bejelentkezés </a></li>
+            <li><a onclick="Rbtn()">Regisztráció</a></li>
+        </div>
+        <?php }?>
+            <li><a href="javascript:void(0);" class="icon" onclick="open()">
+            <i class="fa fa-bars"></i>
+            </a> </li>
+    </ul>
     <!-- sikeres regisztráció -->
     <div id="popup_succes" class="popup_succes">
         <div class="content_succes">
@@ -125,14 +125,14 @@
         </form>
      </div>
     <!-- oldal -->
-    <div class="kep">
-        <div class="blur">
+    <div class="kep" >
+        <div class="blur" >
             <h1>Szabó Sándorné Könyvelés</h1> 
             <h3>Precíz megbízható könyvelés Baranya megye terültén.</h3>
             <h2>Hívjon most! +36-20-***-****</h2>
             </div>
-        </div>
-    <div class="main"id="Ismerteto">
+        </div >
+    <div class="main" id="Ismerteto">
         <ul>
             <h3><li>Precizitás és tapasztalat!</li></h3>
             <h2><li>Szakértelem a könyvelésben</li></h2>
@@ -239,10 +239,10 @@
             <a onclick="mozgas_2()">Árak</a>
             <a onclick="mozgas_3()">Elérhetőségek</a>
             <?php if(isset($_SESSION['keresztnev'])){?>
+            <a href="logout.php">Kijelentkezés</a>
+            <?php }else{?>
             <a onclick="Lbtn()">Bejelntkezés</a>
             <a onclick="Rbtn()">Regisztráció</a>
-            <?php }else{?>
-            <a onclick="Rbtn()">Kijelentkezés</a>
             <?php }?>
         </div>
     </div>

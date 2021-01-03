@@ -5,7 +5,7 @@ function mozgas_0(){
 
 function mozgas_1(){
     element = document.getElementById("Ismerteto");
-    element.scrollIntoView({ top, behavior: "smooth"});
+    window.scrollTo({ top:650,behavior: "smooth"});
 }
 
 function mozgas_2(){
