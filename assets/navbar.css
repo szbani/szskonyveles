@@ -42,6 +42,9 @@
 .left li{
     border-right: 2px solid rgba(90, 90, 90, 0.8) ;
 }
+.logo li{
+    border-right: 2px solid rgba(90, 90, 90, 0.8) ;
+}
 .username{
     font-size: 30px;
     color: rgba(27, 27, 27, 0.8);
@@ -49,8 +52,9 @@
     float: right;
     padding-right: 3%;
     text-align: right;
+    border: none;
 }
-.username h5{
+.username h5{   
     font-weight: bold;
 }
 .username p{
@@ -61,13 +65,47 @@
     cursor: pointer;
 }
 .navbar .icon {
+    padding: 20px;
+    font-size: 25px;
     display: none;
+    text-align: center;
+    text-decoration: none;
+    color: #818181;
   }
   
 @media screen and (max-width: 1250px) {
-    .sidenav a:not(:first-child) {display: none;}
-    .sidenav a.icon {
-      float: right;
-      display: block;
+    .navbar li{display: none;}
+    .navbar a.icon {
+     float: right;
+     display: block;
+    }
+    .logo li{
+        display: block;
+        border-right: 2px solid rgba(90, 90, 90, 0.8) ;
+        border-bottom: 2px solid rgba(90, 90, 90, 0.8) ;
+    }
+  }
+@media screen and (max-width: 400px){
+    .navbar a.icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+  @media screen and (max-width: 1250px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive li {
+      float: none;
+      display: inline-block;
+      text-align: left;
+    }
+    .left.responsive li:not(:first-child){
+        width: 50%;
+    }
+    .right.responsive li{
+        border:none;
+        display: inline-block;
+        float: right;
+        width: 50%;
     }
   }

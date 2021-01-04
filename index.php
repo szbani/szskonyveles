@@ -22,29 +22,35 @@
 </head>
 <body>
     <!-- oldalmenü   -->
-    <ul class="navbar">
-        <div class="left">
+    <ul class="navbar" id="mynavbar">
+        <div class="logo">
+
             <li><a onclick="mozgas_0()">Szabó Sándorné könyvelés</a></li>
+        
+        </div>
+        <div class="left" id="myleft">
+            
             <li><a onclick="mozgas_1()"><i class="fas fa-home"></i>Ismertető</a></li>
             <li><a onclick="mozgas_2()"><i class="fas fa-coins"></i>Árak</a></li>
             <li><a onclick="mozgas_3()"><i class="fas fa-phone"></i>Elérhetőség</a></li>
+
         </div>
-        <?php if (isset($_SESSION['keresztnev'])) { ?>
-        <div class="right">
-            <li class="right"><a href="logout.php" class="logout">Kijelentkezés</a></li>
-        </div>
-        <div class="username">
-            <li><h5>Be vagy jelentkezve</h5><p><?php echo $_SESSION['keresztnev']; ?></p></li>
-        </div>
+        
+        <div class="right" id="myright">
+            <a href="javascript:void(0);" class="icon" onclick="navopen()">
+            <i class="fa fa-bars"></i>
+            </a>
+            <?php if (isset($_SESSION['keresztnev'])) { ?>
+            <li class="username"><h5>Be vagy jelentkezve</h5><p><?php echo $_SESSION['keresztnev']; ?></p></li>
+            <li><a href="logout.php" class="logout">Kijelentkezés</a></li>
             <?php }else{ ?>
-        <div class="right">
             <li><a onclick="Lbtn()">Bejelentkezés </a></li>
             <li><a onclick="Rbtn()">Regisztráció</a></li>
+            <?php }?>
         </div>
-        <?php }?>
-            <li><a href="javascript:void(0);" class="icon" onclick="open()">
-            <i class="fa fa-bars"></i>
-            </a> </li>
+        
+            
+            
     </ul>
     <!-- sikeres regisztráció -->
     <div id="popup_succes" class="popup_succes">
