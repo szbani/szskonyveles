@@ -54,9 +54,14 @@ body h2{
     padding: 20%;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
-    color: #f1f1f1;
+    color: snow;
     background-color: #414141;
-    border-bottom: 3px solid rgba(90, 90, 90, 0.8);
+    z-index: 1;
+    box-shadow: 0 5px 5px 5px #232323;
+}
+.main1 h2{
+    font-size: 220%;
+    text-align: center;
 }
 .main2 {
     padding: 20%;
@@ -69,6 +74,7 @@ body h2{
     padding-bottom: 3%;
 }
 .main2 h3{
+    word-break: break-all;
     display: inline-block;
     padding-inline: 2%;
 }
@@ -84,7 +90,6 @@ body h2{
     background-position: 0px, 200px, 0px, 0px;
     width: 100%;
     height: auto;
-    border-bottom: 3px solid rgba(90, 90, 90, 0.8);
 }
 .main3 h1{
     padding-top: 5%;

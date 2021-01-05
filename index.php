@@ -48,9 +48,6 @@
             <li><a onclick="Rbtn()">Regisztráció</a></li>
             <?php }?>
         </div>
-        
-            
-            
     </ul>
     <!-- sikeres regisztráció -->
     <div id="popup_succes" class="popup_succes">
@@ -185,16 +182,7 @@
         </div>
         </div>    
     <div class="main1" id="Arak">
-            <h1>Áraink</h1>
-            <h2>Bérszámfejtés: 2.500Ft/hó<br>
-                KATA-s vállalkozó: 5.000Ft/hó<br>
-                Egyéni vállakozó: 10.000Ft/hó<br>
-                Alapítvány, egyéb szervezet: 16.000FT/hó<br>
-                Társas vállalkozás(Bt, Kft, stb.): 20.000/hó<br>
-                Végelszámolás összköltsége: 80.000Ft/hó</h2>
-                <br>
-            <h2>Hívjon és kérjen ár ajánlatot.</h2>
-            <h4>Az árak a bruttó értéket tartalmazzák.</h4>  
+            <h2>Írjon emailt vagy hívjon és kérjen árajánlatot.</h2>
         </div>
     <div class="main2" id="Elerhetoseg">
                     <h1>Elérhetőségeink</h1>
@@ -207,7 +195,7 @@
                         kérdésére! Árajánlat kérés itt. 
                     </h2>
                     <h3><i class="fas fa-map-marker-alt"></i>Baranya Megye 7940 Szentlőrinc Deák Ferenc utca 5.</h3>
-                    <h3><i class="fas fa-phone-alt"></i><a href="tel:0620*******">+06-20-***-****</a></h3>
+                    <h3><i class="fas fa-phone-alt"></i><a href="tel:0620*******">+06-20-355-0969</a></h3>
                     <h3><i class="fas fa-envelope"></i><a href="mailto:szabosandornekonyveles@gmail.com">szabosandornekonyveles@gmail.com</a></h3>
         </div>
     
