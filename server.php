@@ -8,7 +8,7 @@ $errors = array();
 $errorslog = array(); 
 
 // csatlakozás az adatbázishoz
-$db = mysqli_connect('localhost', 'id15224852_users', '-r$>mlRonA>3YLJw', 'id15224852_register');
+$db = mysqli_connect('localhost', 'root', '', 'registration');
 if($db->connect_error){
   die("connection failed: " . $db->connect_error);
 }

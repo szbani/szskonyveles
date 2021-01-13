@@ -42,7 +42,7 @@
             </a>
             <?php if (isset($_SESSION['keresztnev'])) { ?>
             <li class="username"><h5>Be vagy jelentkezve</h5><p><?php echo $_SESSION['keresztnev']; ?></p></li>
-            <li><a href="logout.php" class="logout">Kijelentkezés</a></li>
+            <li class="logout"><a href="logout.php">Kijelentkezés</a></li>
             <?php }else{ ?>
             <li><a onclick="Lbtn()">Bejelentkezés </a></li>
             <li><a onclick="Rbtn()">Regisztráció</a></li>
@@ -132,7 +132,7 @@
         <div class="blur" >
             <h1>Szabó Sándorné Könyvelés</h1> 
             <h3>Precíz megbízható könyvelés Baranya megye terültén.</h3>
-            <h2>Hívjon most! +36-20-***-****</h2>
+            <h2>Hívjon most! +36-20-355-0969</h2>
             </div>
         </div >
     <div class="main" id="Ismerteto">
@@ -185,18 +185,15 @@
             <h2>Írjon emailt vagy hívjon és kérjen árajánlatot.</h2>
         </div>
     <div class="main2" id="Elerhetoseg">
-                    <h1>Elérhetőségeink</h1>
-                    <h2>
-                        Keressen minket bizalommal könyvelés, 
-                        bérszámfejtés vagy TB ügyintézés miatt
-                        akár telefonon, e-mail-ben, vagy 
-                        személyesen. Munkatársaink rövid időn
-                        belül választ adnak Önnek bármilyen
-                        kérdésére! Árajánlat kérés itt. 
-                    </h2>
-                    <h3><i class="fas fa-map-marker-alt"></i>Baranya Megye 7940 Szentlőrinc Deák Ferenc utca 5.</h3>
-                    <h3><i class="fas fa-phone-alt"></i><a href="tel:0620*******">+06-20-355-0969</a></h3>
-                    <h3><i class="fas fa-envelope"></i><a href="mailto:szabosandornekonyveles@gmail.com">szabosandornekonyveles@gmail.com</a></h3>
+            <h1>Elérhetőségeink</h1>
+            <h2>
+                Keressen minket bizalommal könyvelés, bérszámfejtés vagy TB ügyintézés miatt
+                akár telefonon, e-mail-ben, vagy személyesen. Munkatársaink rövid időn
+                belül választ adnak Önnek bármilyen kérdésére! Árajánlat kérés itt. 
+            </h2>
+            <h3><i class="fas fa-map-marker-alt"></i>Baranya Megye 7940 Szentlőrinc Deák Ferenc utca 5.</h3>
+            <h3><i class="fas fa-phone-alt"></i><a href="tel:06203550969">+06-20-355-0969</a></h3>
+            <h3><i class="fas fa-envelope"></i><a href="mailto:szabosandornekonyveles@gmail.com">szabosandornekonyveles@gmail.com</a></h3>            
         </div>
     
     <!-- oldal alja -->

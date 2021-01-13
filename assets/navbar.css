@@ -51,7 +51,6 @@
     display: inline;
     border-left: none !important;
     float: right;
-    padding-right: 3%;
     text-align: right;
     border: none;
 }
@@ -62,7 +61,6 @@
     color: #44c77d;
 }
 .logout{
-    color: red;
     cursor: pointer;
 }
 .navbar .icon {
