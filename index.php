@@ -155,7 +155,7 @@
                         <li>sikeresen működjön úgy,</li>
                         <li>hogy a könyvelése és</li>
                         <li>bevallásai pontosan</li>
-                        <li>legyen vezetve és beadva</li>
+                        <li>legyenek vezetve és beadva</li>
                         <li>az illetékes szervek felé.</li>
                     </h3>
                 </ul>
@@ -165,7 +165,7 @@
                         <li>Társas és egyéni</li>
                         <li>vállalkozásoknak, civil</li>
                         <li>szervezeteknek, frissen</li>
-                        <li>induló, vagy régen működő</li>
+                        <li>induló, vagy régebb óta működő</li>
                         <li>cégeknek egyaránt.</li>
                     </h3>
                 </ul>
@@ -182,7 +182,18 @@
         </div>
         </div>    
     <div class="main1" id="Arak">
-            <h2>Írjon emailt vagy hívjon és kérjen árajánlatot.</h2>
+            <h2>Ajánlat kéréshez írjon emailt vagy hívjon minket!</h2>
+            <?php if(isset($_SESSION['keresztnev'])){?>
+            <form>
+            <label>Tárgy</label><br>
+            <input type="text" placeholder="Ide írd az üzeneted." name="subject"><br>
+            <label>Üzenet</label><br>
+            <input type="text" placeholder="Ide írd az üzeneted." name="message"><br>
+            <button type="submit" name="email_send">Küldés</button>
+            </form>
+            <?php }else{?>
+            <h3>Regisztációt követő bejelntkezés során levelére gyorsabban reagálunk.</h3>
+            <?php }?>
         </div>
     <div class="main2" id="Elerhetoseg">
             <h1>Elérhetőségeink</h1>
@@ -204,7 +215,7 @@
             <br>
             <h2>Szabó Sándorné könyvelés</h2>
             <ul>
-                <li>ADÓSZÁM: #######</li>
+                <li>ADÓSZÁM: 65343018-1-22</li>
                 <li>7940 SZENTLŐRINC</li>
                 <li>DEÁK FERENC UTCA 5</li>
             </ul>

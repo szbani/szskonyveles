@@ -63,6 +63,10 @@ body h2{
     font-size: 220%;
     text-align: center;
 }
+.main1 h3{
+    font-size: 150%;
+    text-align: center;
+}
 .main2 {
     background-color: ghostwhite;
     padding: 20%;
