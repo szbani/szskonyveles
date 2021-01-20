@@ -184,11 +184,11 @@
     <div class="main1" id="Arak">
             <h2>Ajánlat kéréshez írjon emailt vagy hívjon minket!</h2>
             <?php if(isset($_SESSION['keresztnev'])){?>
-            <form>
-            <label>Tárgy</label><br>
+            <form method="post" action="email.php">
+            <p>Tárgy</p>
             <input type="text" placeholder="Ide írd az üzeneted." name="subject"><br>
-            <label>Üzenet</label><br>
-            <input type="text" placeholder="Ide írd az üzeneted." name="message"><br>
+            <p>Üzenet</p>
+            <textarea placeholder="Ide írd az üzeneted." name="message"></textarea><br>
             <button type="submit" name="email_send">Küldés</button>
             </form>
             <?php }else{?>
@@ -204,7 +204,7 @@
             </h2>
             <h3><i class="fas fa-map-marker-alt"></i>Baranya Megye 7940 Szentlőrinc Deák Ferenc utca 5.</h3>
             <h3><i class="fas fa-phone-alt"></i><a href="tel:06203550969">+06-20-355-0969</a></h3>
-            <h3><i class="fas fa-envelope"></i><a href="mailto:szabosandornekonyveles@gmail.com">szabosandornekonyveles@gmail.com</a></h3>            
+            <h3><i class="fas fa-envelope"></i><a href="mailto:szaboskonyveles@gmail.com">szabosandornekonyveles@gmail.com</a></h3>            
         </div>
     
     <!-- oldal alja -->

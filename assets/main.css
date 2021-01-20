@@ -59,6 +59,30 @@ body h2{
     z-index: 1;
     box-shadow: -5px 5px 5px 5px #232323;
 }
+.main1 form{
+    border: solid 2px #232323;
+}
+.main1 p{
+    padding-top: 20px;
+    font-size: 130%;
+    margin-left: 50px;
+    margin-bottom: 5px;
+}
+.main1 input, textarea{
+    margin-left: 50px;
+    padding: 3px;
+    width: 250px;
+}
+.main1 textarea{
+    height: 100px;
+}
+.main1 button{
+    background-color: slateblue;
+    font-weight: bold;
+    padding: 2px ;
+    width: 200px;
+    margin: 0 auto;
+}
 .main1 h2{
     font-size: 220%;
     text-align: center;

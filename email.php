@@ -1,11 +1,14 @@
 <?php
-session_start();
+
 
 $subject = "";
 $msg = "";
-$email    = "";
-if (isset($_POST['email_send'])) {
+$email = "";
+$header = "";
+if(isset($_POST['email_send'])){
+    $subject = $_POST['subject'];
     $msg = $_POST['message'];
-    mail("szabosandornekonyveles@gmail.com","My subject",$msg);
+    $header = array("From:" + $_SESSION['email']);
+    mail("szabosandornekonyveles@gmail.com",$subject,$msg,$header);
 }
 ?>
