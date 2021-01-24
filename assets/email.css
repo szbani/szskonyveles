@@ -1,0 +1,71 @@
+
+.email_form{
+	font: 95% Arial, Helvetica, sans-serif;
+	max-width: 400px;
+	padding: 16px;
+	background: #F7F7F7;
+}
+.email_form h1{
+	background: #64a1f4;
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+	margin: -16px -16px 16px -16px;
+}
+.email_form input[type="text"],
+.email_form textarea
+{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.email_form input[type="text"]:focus,
+.email_form textarea:focus
+{
+	box-shadow: 0 0 5px #64a1f4;
+	padding: 3%;
+	border: 1px solid #64a1f4;
+}
+
+.email_form input[type="submit"],
+.email_form input[type="button"]{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: #64a1f4;
+	border-bottom: 2px solid #4a91f2;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;	
+	color: #fff;
+}
+.email_form input[type="submit"]:hover,
+.email_form input[type="button"]:hover{
+	background: #4a91f2;
+}
+
+
+/*#fe4a49 piros
+
+#65c3ba lollypop
+
+
+#8dbdff • #64a1f4 kékek
+
+#854442  jah

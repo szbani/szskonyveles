@@ -1,7 +1,7 @@
 .bottomnav{
     width: 100%;
     height: auto;
-    background-color: #232323;
+    background-color: #272727;
     color:#f1f1f1;
     border-top: 3px solid rgba(90, 90, 90, 0.8);
 }
@@ -25,12 +25,12 @@
     list-style: none;
 }
 .bottomnav a{
-    color: #44c77d;
+    color: #4a91f2;
     cursor: pointer;
     padding-inline: 10px;
 }
 .bottomnav a:hover{
-    color:  #A0A0A0;
+    color:  #64a1f4;
 }
 .row iframe{
     vertical-align: bottom;

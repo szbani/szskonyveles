@@ -13,6 +13,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='assets/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/kepek.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/navbar.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/email.css'>
     <link rel="stylesheet" type="text/css" href="assets/purecookie.css" async />
     <link rel='stylesheet' type='text/css' media='screen' href='assets/bottomnav.css'>
     <script src="https://kit.fontawesome.com/1d71ea3fec.js" crossorigin="anonymous"></script>
@@ -69,23 +70,15 @@
 
     <!--  felugró menü (bejelentkezés)  -->
     <div id="Lpopup" class="popup">
-        <div class="header">
-        <span onclick="Lclosebtn()" class="closebtn">&times;</span>
-  	    <h2>Bejelentkezés</h2>
-        </div>
         <form method="post">
+        <span onclick="Lclosebtn()" class="closebtn">&times;</span>
+        <h1>Bejelentkezés</h1>
         <?php include('errorslog.php'); ?>
-  	    <div class="input-group">
   		    <label>Email</label>
   		    <input type="text" name="email" >
-  	    </div>
-  	    <div class="input-group">
   		    <label>Jelszó</label>
   		    <input type="password" name="password">
-  	    </div>
-  	    <div class="input-group">
   		    <button type="submit" class="btn" name="login_user">Bejelentkezés</button>
-  	    </div>
   	        <p>
   		        Nincs még fiókod? <a onclick="Rbtn()" class="changepopup">Regisztálj</a>
   	        </p>
@@ -93,35 +86,21 @@
         </div>
     <!--  felugró menü (regisztárció)  -->
     <div id="Rpopup" class="popup">
-        <div class="header">
-            <span onclick="Rclosebtn()" class="closebtn">&times;</span>
-  	        <h2>Regisztráció</h2>
-        </div>
+            
         <form method="post">
+        <span onclick="Rclosebtn()" class="closebtn">&times;</span>
+  	    <h1>Regisztráció</h1>
         <?php include('errors.php'); ?>
-  	    <div class="input-group-user">
-  	        <label>Vezetéknév</label>
-            <input type="text" name="vezeteknev" value="<?php echo $vezeteknev; ?>">
-  	    </div>
-        <div class="input-group-user" style="float:right">
-            <label>Keresztnév</label>
-            <input type="text" name="keresztnev" value="<?php echo $keresztnev; ?>">
-        </div>
-  	    <div class="input-group">
+  	        <label>Teljes név</label>
+            <input type="text" class="divided" placeholder="Vezetéknév" name="vezeteknev" value="<?php echo $vezeteknev; ?>">
+            <input type="text" class="divided" placeholder="Keresztnév" name="keresztnev" value="<?php echo $keresztnev; ?>">
   	        <label>Email</label>
   	        <input type="email" name="email" value="<?php echo $email; ?>">
-  	    </div>
-  	    <div class="input-group">
   	        <label>Jelszó</label>
   	        <input type="password" name="password_1">
-  	    </div>
-  	    <div class="input-group">
   	        <label>Jelszó megerősítése</label>
   	        <input type="password" name="password_2">
-  	    </div>
-  	    <div class="input-group">
   	        <button type="submit" class="btn" name="reg_user">Regisztráció</button>
-  	    </div>
   	        <p>
   		        Van már fiókod? <a onclick="Lbtn()" class="changepopup">Jelentkezz be</a>
   	        </p>
@@ -182,18 +161,21 @@
         </div>
         </div>    
     <div class="main1" id="Arak">
-            <h2>Ajánlat kéréshez írjon emailt vagy hívjon minket!</h2>
+        <div class="main1_box">
+            
             <?php if(isset($_SESSION['keresztnev'])){?>
-            <form method="post" action="email.php">
-            <p>Tárgy</p>
-            <input type="text" placeholder="Ide írd az üzeneted." name="subject"><br>
-            <p>Üzenet</p>
-            <textarea placeholder="Ide írd az üzeneted." name="message"></textarea><br>
-            <button type="submit" name="email_send">Küldés</button>
-            </form>
-            <?php }else{?>
-            <h3>Regisztációt követő bejelntkezés során levelére gyorsabban reagálunk.</h3>
+            <div class="email_form" style="float:right;">
+                <h1>Írj nekünk emailt!</h1>
+                <form method="post" action="email.php">
+                <input type="text" name="subject" placeholder="Írd ide a Tárgyat" />
+                <textarea name="message" placeholder="Írd ide az üzeneted."></textarea>
+                <input type="submit" name="email_send" value="Küldés" />
+                </form>
+            </div>
             <?php }?>
+            <h2>Ajánlat kéréshez írjon emailt vagy hívjon minket!</h2>
+            <h3>Regisztációt követő bejelentkezés során az oldalról írt levelére gyorsabban reagálunk.</h3>
+        </div>
         </div>
     <div class="main2" id="Elerhetoseg">
             <h1>Elérhetőségeink</h1>

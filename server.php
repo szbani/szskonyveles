@@ -8,7 +8,7 @@ $errors = array();
 $errorslog = array(); 
 
 // csatlakozás az adatbázishoz
-$db = mysqli_connect('localhost', 'root', '', 'registration');
+$db = mysqli_connect('localhost', 'id15224852_users', '-r$>mlRonA>3YLJw', 'id15224852_register');
 if($db->connect_error){
   die("connection failed: " . $db->connect_error);
 }
@@ -48,6 +48,7 @@ if (isset($_POST['reg_user'])) {
   	$query = "INSERT INTO users (vezeteknev, keresztnev, email, password) 
   			  VALUES('$vezeteknev', '$keresztnev', '$email', '$password')";
     mysqli_query($db, $query);
+    $_SESSION['vezeteknev'] = $vezeteknev;
     $_SESSION['keresztnev'] = $keresztnev;
   	$_SESSION['email'] = $email;
   	$_SESSION['success'] = "Sikeres regisztáció";
@@ -57,7 +58,6 @@ if (isset($_POST['reg_user'])) {
 if (isset($_POST['login_user'])) {
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $password = mysqli_real_escape_string($db, $_POST['password']);
-  
     if (empty($email)) {
         array_push($errorslog, "Hiányzik az email");
     }
@@ -71,6 +71,7 @@ if (isset($_POST['login_user'])) {
         $results = mysqli_query($db, $query);
         $row = mysqli_fetch_assoc($results);
         if (mysqli_num_rows($results) == 1) {
+          $_SESSION['vezeteknev'] = $row['vezeteknev'];
           $_SESSION['keresztnev'] = $row['keresztnev'];
           $_SESSION['email'] = $email;
           $_SESSION['success'] = "Be vagy jelentkezve";

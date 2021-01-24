@@ -52,15 +52,11 @@ body h2{
 }
 .main1 {
     padding: 20%;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    color: snow;
-    background-color: #414141;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    background-color:  #eeeeee;
     z-index: 1;
     box-shadow: -5px 5px 5px 5px #232323;
-}
-.main1 form{
-    border: solid 2px #232323;
 }
 .main1 p{
     padding-top: 20px;
@@ -68,14 +64,7 @@ body h2{
     margin-left: 50px;
     margin-bottom: 5px;
 }
-.main1 input, textarea{
-    margin-left: 50px;
-    padding: 3px;
-    width: 250px;
-}
-.main1 textarea{
-    height: 100px;
-}
+
 .main1 button{
     background-color: slateblue;
     font-weight: bold;
@@ -84,12 +73,17 @@ body h2{
     margin: 0 auto;
 }
 .main1 h2{
-    font-size: 220%;
+    font-size: 200%;
     text-align: center;
 }
 .main1 h3{
     font-size: 150%;
     text-align: center;
+}
+.main1_box{
+    width: 100%;
+    display: inline-block;
+    background-color: ghostwhite;
 }
 .main2 {
     background-color: ghostwhite;
