@@ -32,7 +32,7 @@
         <div class="left" id="myleft">
             
             <li><a onclick="mozgas_1()"><i class="fas fa-home"></i>Ismertető</a></li>
-            <li><a onclick="mozgas_2()"><i class="fas fa-coins"></i>Árak</a></li>
+            <li><a onclick="mozgas_2()"><i class="fas fa-coins"></i>Ajánlatkérés</a></li>
             <li><a onclick="mozgas_3()"><i class="fas fa-phone"></i>Elérhetőség</a></li>
 
         </div>
